@@ -18,10 +18,6 @@ app.secret_key = 'rhizopus'
 # Pass app to Api class
 api = Api(app)
 
-@app.before_first_request
-def create_tables():
-    db.create_all()
-
 # Create jwt object
 jwt = JWT(app, authentication, identity) # Creates a new endpoint /auth
 
