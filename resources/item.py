@@ -72,6 +72,7 @@ class Item(Resource):
 
 
 class ItemList(Resource):
+    @jwt_required()
     def get(self):
         """
             Using a lambda function
